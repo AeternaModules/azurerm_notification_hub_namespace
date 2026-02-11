@@ -20,10 +20,10 @@ EOT
     namespace_type          = string
     resource_group_name     = string
     sku_name                = string
-    enabled                 = optional(bool, true)
-    replication_region      = optional(string, "Default")
+    enabled                 = optional(bool)   # Default: true
+    replication_region      = optional(string) # Default: "Default"
     tags                    = optional(map(string))
-    zone_redundancy_enabled = optional(bool, false)
+    zone_redundancy_enabled = optional(bool) # Default: false
   }))
 }
 
