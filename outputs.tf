@@ -1,3 +1,7 @@
+output "notification_hub_namespaces_id" {
+  description = "Map of id values across all notification_hub_namespaces, keyed the same as var.notification_hub_namespaces"
+  value       = { for k, v in azurerm_notification_hub_namespace.notification_hub_namespaces : k => v.id }
+}
 output "notification_hub_namespaces_enabled" {
   description = "Map of enabled values across all notification_hub_namespaces, keyed the same as var.notification_hub_namespaces"
   value       = { for k, v in azurerm_notification_hub_namespace.notification_hub_namespaces : k => v.enabled }
