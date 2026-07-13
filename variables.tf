@@ -20,10 +20,10 @@ EOT
     namespace_type          = string
     resource_group_name     = string
     sku_name                = string
-    enabled                 = optional(bool)   # Default: true
-    replication_region      = optional(string) # Default: "Default"
+    enabled                 = optional(bool)
+    replication_region      = optional(string)
     tags                    = optional(map(string))
-    zone_redundancy_enabled = optional(bool) # Default: false
+    zone_redundancy_enabled = optional(bool)
   }))
   # --- Unconfirmed validation candidates, derived from azurerm_notification_hub_namespace's provider source ---
   # Not auto-enabled: either a bespoke provider validator we can't safely translate,
